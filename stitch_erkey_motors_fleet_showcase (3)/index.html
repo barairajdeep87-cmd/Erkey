@@ -144,7 +144,7 @@
 <!-- Top Navigation Bar (Updated from SCREEN_9) -->
 <header class="fixed top-0 left-0 w-full z-[100] h-20 glass-nav" id="main-header">
 <nav class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-full flex justify-between items-center">
-<a class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface" href="#">
+<a class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface" href="../index.html">
 <div class="flex items-center gap-4">
 <img alt="Erkey Motors Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSIHcnqzNyujXQoVIHxSW-na5F5ieMrfWI534pMLMjahewXgZYgg6GkCsZTgi7ejiWixH5Gzqb0u7JMcG9_gEM0hqPwgCX5fTDOXzRVu1TgupN1SDL-u_8k0zRN9GwQRfzUmq6gmRB4uQUGsiJLOx8rViIicfOoF5J-4A-fSVtYZ8JyR5v-QbcVuGeeE2KMHsPjwiphXITvkTUW6ZRPZk-aXtZ54puiqwQlxovUoz9KWykQILQFLFINBu7ZgODHqaHB5xVs3O-qevZ">
 <span class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface">Erkey Motors</span>
@@ -182,7 +182,6 @@
 <a class="font-nav-label text-nav-label text-on-surface hover:text-primary transition-colors" href="#vehicle">EXPLORE</a>
 
 <a class="font-nav-label text-nav-label text-on-surface hover:text-primary transition-colors" href="#fleet-calculator">CALCULATOR</a>
-<a class="font-nav-label text-nav-label text-on-surface hover:text-primary transition-colors" href="#gallery">TECH</a>
 <button class="bg-primary text-white font-button-label text-button-label px-6 py-3 rounded-full hover:shadow-lg transition-all cursor-pointer">Build &amp; Price</button>
 </div>
 </nav>
@@ -212,7 +211,7 @@
 </div>
 </div>
 </div>
-<div class="col-span-12 lg:col-span-8 h-[600px] relative bg-center bg-no-repeat bg-contain" style="background-image: url('bike-hero.png');">
+<div class="col-span-12 lg:col-span-8 h-[600px] relative bg-center bg-no-repeat bg-contain" style="background-image: url('ChatGPT%20Image%20Jul%206,%202026,%2011_54_25%20PM.png');">
 <!-- Floating Stat Badge -->
 <div class="absolute bottom-10 right-10 glass-card p-6 rounded-2xl flex items-center gap-6 shadow-sm">
 <div class="text-center">
@@ -302,35 +301,57 @@
 <h2 class="font-headline-lg text-headline-lg text-on-surface">Fleet Savings <span class="text-primary">Calculator</span></h2>
 <p class="text-on-surface-variant">See the immediate impact of switching to Erkey electric. Input your fleet data below.</p>
 <div class="space-y-6">
-<div class="space-y-2">
-<label class="text-xs uppercase font-bold tracking-widest text-on-surface-variant opacity-60">Avg. Daily Distance (km)</label>
-<input class="w-full accent-primary h-2 bg-surface-container-high rounded-lg appearance-none cursor-pointer" max="200" min="10" type="range" value="85">
-<div class="flex justify-between text-sm font-bold text-on-surface"><span class="">10km</span><span class="">200km</span></div>
+    <div class="space-y-2">
+        <div class="flex justify-between items-center">
+            <label class="text-xs uppercase font-bold tracking-widest text-on-surface-variant opacity-60">Avg. Daily Distance</label>
+            <span id="calc-distance-val" class="text-sm font-bold text-primary">85 km</span>
+        </div>
+        <input id="calc-distance" class="w-full accent-primary h-2 bg-surface-container-high rounded-lg appearance-none cursor-pointer" max="200" min="10" type="range" value="85">
+        <div class="flex justify-between text-sm font-semibold text-on-surface-variant/60"><span>10 km</span><span>200 km</span></div>
+    </div>
+    <div class="space-y-2">
+        <div class="flex justify-between items-center">
+            <label class="text-xs uppercase font-bold tracking-widest text-on-surface-variant opacity-60">Fleet Size</label>
+            <span id="calc-fleet-val" class="text-sm font-bold text-primary">10 Vehicles</span>
+        </div>
+        <input id="calc-fleet" class="w-full accent-primary h-2 bg-surface-container-high rounded-lg appearance-none cursor-pointer" max="100" min="1" type="range" value="10">
+        <div class="flex justify-between text-sm font-semibold text-on-surface-variant/60"><span>1 Vehicle</span><span>100 Vehicles</span></div>
+    </div>
+    <div class="space-y-2">
+        <label class="text-xs uppercase font-bold tracking-widest text-on-surface-variant opacity-60">Gas Price (Per Liter)</label>
+        <div class="relative">
+            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-primary font-bold">₹</span>
+            <input id="calc-gas-price" class="w-full bg-surface-container-low border border-surface-variant rounded-xl py-4 pl-10 pr-4 focus:border-primary focus:ring-1 focus:ring-primary text-on-surface font-semibold" type="number" value="96.72" step="0.01">
+        </div>
+    </div>
 </div>
-<div class="space-y-2">
-<label class="text-xs uppercase font-bold tracking-widest text-on-surface-variant opacity-60">Gas Price (Per Liter)</label>
+</div>
 <div class="relative">
-<span class="absolute left-4 top-1/2 -translate-y-1/2 text-primary">₹</span>
-<input class="w-full bg-surface-container-low border border-surface-variant rounded-xl py-4 pl-10 pr-4 focus:border-primary focus:ring-1 focus:ring-primary text-on-surface" type="number" value="96.72">
-</div>
-</div>
-</div>
-<div class="pt-8">
-<button class="bg-primary text-white font-bold py-5 px-10 rounded-full hover:shadow-xl transition-all">Calculate Yearly Savings</button>
-</div>
-</div>
-<div class="relative">
-<div class="absolute -inset-10 bg-primary/5 blur-[100px] rounded-full"></div>
-<div class="relative bg-surface-container-lowest p-10 rounded-[32px] text-center space-y-6 border border-surface-variant shadow-lg">
-<p class="text-sm uppercase tracking-widest text-on-surface-variant font-bold">Estimated Yearly Savings</p>
-<div class="text-6xl lg:text-8xl font-black text-on-surface">₹4,00,000</div>
-<p class="text-primary font-bold">Per Single Vehicle</p>
-<div class="flex justify-center items-end gap-4 pt-8">
-<div class="w-1/3 h-20 bg-primary rounded-lg opacity-40"></div>
-<div class="w-1/3 h-32 bg-primary rounded-lg opacity-70"></div>
-<div class="w-1/3 h-48 bg-primary rounded-lg"></div>
-</div>
-</div>
+    <div class="absolute -inset-10 bg-primary/5 blur-[100px] rounded-full"></div>
+    <div class="relative bg-surface-container-lowest p-8 lg:p-10 rounded-[32px] text-center space-y-6 border border-surface-variant shadow-lg">
+        <p class="text-sm uppercase tracking-widest text-on-surface-variant font-bold">Estimated Yearly Savings</p>
+        <div id="calc-savings-display" class="text-5xl lg:text-6xl font-black text-on-surface transition-all duration-300">₹4,00,000</div>
+        <p id="calc-per-vehicle-display" class="text-primary font-bold">₹40,000 Per Single Vehicle</p>
+        
+        <!-- Dynamic Cost Comparison Bars -->
+        <div class="pt-6 border-t border-surface-variant/30">
+            <p class="text-xs uppercase font-bold tracking-widest text-on-surface-variant opacity-60 mb-6">Annual Running Cost Comparison</p>
+            <div class="flex justify-center items-end gap-12 h-44 px-4">
+                <!-- ICE Cost Bar -->
+                <div class="flex flex-col items-center w-1/3 group">
+                    <div id="bar-ice" class="w-16 bg-slate-400 dark:bg-slate-600 rounded-t-lg transition-all duration-500 ease-out" style="height: 80%;"></div>
+                    <span id="bar-ice-val" class="text-xs font-bold text-on-surface mt-2">₹1.2L</span>
+                    <span class="text-[10px] uppercase font-bold text-on-surface-variant opacity-60 mt-1">ICE Fleet</span>
+                </div>
+                <!-- Erkey Cost Bar -->
+                <div class="flex flex-col items-center w-1/3 group">
+                    <div id="bar-erkey" class="w-16 bg-primary rounded-t-lg transition-all duration-500 ease-out" style="height: 15%;"></div>
+                    <span id="bar-erkey-val" class="text-xs font-bold text-primary mt-2">₹20K</span>
+                    <span class="text-[10px] uppercase font-bold text-primary mt-1">Erkey EV</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </div>
 </section>
@@ -405,47 +426,7 @@
 </div>
 </div>
 </section>
-<!-- Module 9: Gallery (Restyled for Light Mode) -->
-<section class="bg-surface-container-low py-12" id="gallery"><div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter"><!-- Row 1: Technical Details -->
-<div class="md:col-span-4 md:row-span-1 group relative overflow-hidden rounded-2xl bg-white shadow-sm border border-surface-variant/20 aspect-[16/9]">
-<img alt="Brake System Detail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsG8fbQdo7W24-QIwF9h0yz6PQ3F0PikUj4EA2SyjCzVUFRJUQOFjAJaPlbRMTuuDQ31cr0JN2zz81zCK7JMOJ3vmJqKyK-JhfrvXvm8YK-Ej71HKur5Q9Yh3JjGKSyNbhLlDPoU7uWkc66ZUkoTD2AXujLxYVBGTnkAM51ijeeD3JPf-4iZX4kqfm3xSN4Vbkg6jRbcgliO8ofInT3-wykVn8unaKCxomn_VeUnNqbFu9MB3lc7LkvsNKojWidLTma3p59onRPQsp">
-<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-</div>
-<div class="md:col-span-4 md:row-span-1 group relative overflow-hidden rounded-2xl bg-white shadow-sm border border-surface-variant/20 aspect-[16/9]">
-<img alt="Footpeg Detail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTpo0JlQGDzmRKmmsUe8WB761iBo1c-AnmhYXZG_9_c_qTEe-gdxbRfMTAqyc5KkdAyrUsbU8ra8LFcyf05LmcixrFU1ow6SiyPWTzSLM1ry3Zwq1nsUEJ1RW0h58ENSpi4QNmHqjJBc--THg72WfR5IPU5rYMZlHcHkTIz57NB1YoLFtnGoLWqtA3vN-DB7BDcAlnMoNDLBQ_EiGFlkkp0GYSuU_hD-yD3t72Ocf1KnsjMKnDFP_4HFRB1P0iwMJ5OySWZvggJZkw">
-<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-</div>
-<div class="md:col-span-4 md:row-span-1 group relative overflow-hidden rounded-2xl bg-white shadow-sm border border-surface-variant/20 aspect-[16/9]">
-<img alt="Rear Suspension Detail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoJmfl7swpXvyIO5ynvSg-sRAVkPyOntph9_HOWcGooFCsOiceAo9AYgGLJg0vAmYdAQZtXhhzLL2R5jbfRwUW6-bmXoTN71AEazXJvqA_aqpatPDlAbtz-y20JGabVP-CPa2wIgtufxv4aZxNMyKF-JthqyKqcoo_Uki3NUanKSs4wiLOFMCzA593TAYFoEbiof2-Dd4qc1J0RciE6V4q-fQMUygXQGHiPVZdpZl27uxxKG3Fapif3Cjn2TOzl4zNOLqwbS1S0cLO">
-<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-</div>
-<!-- Row 2: Main Components -->
-<div class="md:col-span-6 group relative overflow-hidden rounded-2xl bg-white shadow-lg border border-surface-variant/20 aspect-square md:aspect-auto aspect-[16/9]">
-<img alt="Erkey S93 Full Profile" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQPuJikPjrtrnIyb7TbeWLodq3abFtk-CtHVvPpmeR8R6-V267r7iLKSomu7EZEgF49tBKBnMnw6vGzxyRyXp7WsmfJ1nEbLowRuBUZrKZDRoOh-950JJnw-2ywmb0skcAlYMTfr4UhkNJ88vSYEny9SQJ3q5zW07GtyyjzWlqXne-RvVmXKtR9g4VpnYJz-pTcFuZ8wUoylAKrImKMKvLxMvquE5tLKuGddDUetwxe7LYid9blU4E3JlZiETpiUIYuE7Z-p7SpPwf">
-<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-</div>
-<div class="md:col-span-6 md:row-span-1 group relative overflow-hidden rounded-2xl bg-white shadow-sm border border-surface-variant/20 aspect-[16/9] md:aspect-auto">
-<img alt="Digital Dashboard" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWBPsJRzbhfyMGqvp-vGt6pII4h1u9xAh81FTMlfGga_ARJNOBg0kA999nfakeeep83X-Bd4Lp6ffK3lV0vdkK3O_e74HR7hxikuzhUFNEHUDz8VUhINqU9c7M3ymxYxoFCWM8O7CAryrivi-Ie18LuHtw2G6iMLu-OrA4-AmPPX-S6V69A84yWqVE-3Ds9jM6YBY2Sok1rxfudyD7SbYhECx7gTdGq8Dx3BFuCuBLFg4_vZWsdxMvKIvXRNc-SZXG1gKtK_MEvy9i">
-<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-</div>
-<!-- Row 3: Front End Details -->
-<div class="md:col-span-3 md:row-span-1 group relative overflow-hidden rounded-2xl bg-white shadow-sm border border-surface-variant/20 aspect-square">
-<img alt="Front Suspension" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWDe1Cp1NSqcydHIRaaB_HDvBaaKT7YGXSzzZefyn7l9qZ1fGiygPsHLheVtY4ypZQjyCeP_orUDjgi9GpuU6kV8xZUnFI3Hqpk8SHd75hcJ6Rk3PVEBFI-a_LRuCcD4zGVapj1lAXsfyAQaBP3tIEu50UgqyzD3iqb7FgbJYajyjKvLcH2vmCCHw0H49MKzB45MJLSkRjjHGH2ZAnat0gyBSRFAiaSBJQhRwtVTf40S4qJEdfl0BmNYwiGJBX9WA4w62DwQfFbwB-">
-<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-</div>
-<div class="md:col-span-3 md:row-span-1 group relative overflow-hidden rounded-2xl bg-white shadow-sm border border-surface-variant/20 aspect-square">
-<img alt="Headlight Detail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKMMFCmTohcLEaFSFUvYKfBdGoeeSyldFUIa4GSs1IeGPb-zSR21YbCuaxR0xJ1VPFpGM_tkA2HmIeqrtaLFgn-6L1m0s0j73vLmbTCFNkgaBVUkrq1lglPHDJBuhN4E5fMMgHIvk_Qpv6FcLkRps1FDPOKwydqmGpPA17DcHPfulHjWCMujWwil6S7Og0uJXskiZedr-ESsK51pY54uCUIG_EO-deX2_BnPYGwjYUXEZW38QVrivMNfDyGGCrQDTrLIG58vgnAVbL">
-<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-</div>
-<!-- Row 4: Battery & Wheel -->
-<div class="md:col-span-8 group relative overflow-hidden rounded-2xl bg-white shadow-2xl border-2 border-primary/20 aspect-square md:aspect-auto aspect-[16/9]">
-<img alt="Swappable Battery Unit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWDe1Cp1NSqcydHIRaaB_HDvBaaKT7YGXSzzZefyn7l9qZ1fGiygPsHLheVtY4ypZQjyCeP_orUDjgi9GpuU6kV8xZUnFI3Hqpk8SHd75hcJ6Rk3PVEBFI-a_LRuCcD4zGVapj1lAXsfyAQaBP3tIEu50UgqyzD3iqb7FgbJYajyjKvLcH2vmCCHw0H49MKzB45MJLSkRjjHGH2ZAnat0gyBSRFAiaSBJQhRwtVTf40S4qJEdfl0BmNYwiGJBX9WA4w62DwQfFbwB-">
-<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-</div>
-<div class="md:col-span-4 group relative overflow-hidden rounded-2xl bg-white shadow-sm border border-surface-variant/20 aspect-square md:aspect-auto aspect-[16/9]">
-<img alt="Front Wheel &amp; Disc Brake" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7mqcs2CqrvPZBlkYKPt-tJE27Q1iaC1MWYIdu7DDb2VMgbJQGvCHnJJzLLBdnkyjvfNoqQTW_8OpAYIKuDBtGHzUmohBliRYRKJWB7jlJJ1Cjf_wAwCHo3Nv7R94-tSMES2hLQeUjuEEPadh8Fg5ptoA8bcpYBDKB2V4gt1CyAURN09PEUCDJ55hcEHEbX5MKBWPGCMdmiqX59XF45qQAxMAihPcqNx3BV43Q3w21MzHxa4EpYJLkKvsKytQH0uVNWmvMAtGUf7oH">
-<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-</div></div></div></section>
+
 <!-- Module 10: AI Assistant (Restyled for Light Mode) -->
 <div class="fixed bottom-10 right-10 z-[101]" id="ai-assistant">
 <div class="group relative">
@@ -476,10 +457,19 @@
 <span class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface">Erkey Motors</span>
 </div>
 </div>
-<p class="text-body-md font-body-md text-on-surface-variant mb-stack-md">Engineering the next generation of last-mile electric mobility for commercial dominance.</p>
-<div class="flex gap-4">
-<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-on-surface hover:text-primary transition-colors border border-surface-variant/20 shadow-sm" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
-<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-on-surface hover:text-primary transition-colors border border-surface-variant/20 shadow-sm" href="#"><span class="material-symbols-outlined text-sm">mail</span></a>
+<p class="text-body-md font-body-md text-on-surface-variant mb-stack-md">
+    Registered Address - 804, Seepat road Sarkanda Bilaspur, C.G - 495001<br>
+    Office Address - Old Forestry, TEC Building, Guru Ghasidas University Campus, Koni Bilaspur
+</p>
+<div class="flex flex-col gap-2 items-start">
+<a class="flex items-center gap-2 px-4 py-2 rounded-full bg-white text-on-surface hover:text-primary transition-colors border border-surface-variant/20 shadow-sm font-button-label text-caption" href="https://maps.app.goo.gl/88bitGeGm4DQzKxr8" target="_blank" rel="noopener noreferrer">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+View on Map
+</a>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2">
+    Mail id - info@erkeymotor.com<br>
+    Contact - 8073435017
+</p>
 </div>
 </div>
 <div>
@@ -525,7 +515,7 @@
         let current = "";
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            if (pageYOffset >= (sectionTop - 150)) {
+            if (window.pageYOffset >= (sectionTop - 150)) {
                 current = section.getAttribute('id');
             }
         });
@@ -537,6 +527,89 @@
             }
         });
     });
+
+    // Fleet Savings Calculator Logic
+    const distanceInput = document.getElementById('calc-distance');
+    const fleetInput = document.getElementById('calc-fleet');
+    const gasPriceInput = document.getElementById('calc-gas-price');
+
+    const distanceVal = document.getElementById('calc-distance-val');
+    const fleetVal = document.getElementById('calc-fleet-val');
+
+    const savingsDisplay = document.getElementById('calc-savings-display');
+    const perVehicleDisplay = document.getElementById('calc-per-vehicle-display');
+
+    const barIce = document.getElementById('bar-ice');
+    const barErkey = document.getElementById('bar-erkey');
+    const barIceVal = document.getElementById('bar-ice-val');
+    const barErkeyVal = document.getElementById('bar-erkey-val');
+
+    function calculateSavings() {
+        if (!distanceInput || !fleetInput || !gasPriceInput) return;
+
+        const dailyDistance = parseFloat(distanceInput.value) || 0;
+        const fleetSize = parseFloat(fleetInput.value) || 0;
+        const gasPrice = parseFloat(gasPriceInput.value) || 0;
+
+        // Update labels
+        distanceVal.textContent = `${dailyDistance} km`;
+        fleetVal.textContent = `${fleetSize} ${fleetSize === 1 ? 'Vehicle' : 'Vehicles'}`;
+
+        // Constants for calculation
+        const iceMileage = 35; // km per liter
+        const iceMaintenance = 1.50; // ₹ per km
+        const evSwapping = 1.00; // ₹ per km
+        const evElectricity = 0.20; // ₹ per km
+        const evMaintenance = 0.30; // ₹ per km
+
+        const iceCostPerKm = (gasPrice / iceMileage) + iceMaintenance;
+        const evCostPerKm = evElectricity + evSwapping + evMaintenance;
+
+        const yearlyIceCost = dailyDistance * 365 * iceCostPerKm * fleetSize;
+        const yearlyEvCost = dailyDistance * 365 * evCostPerKm * fleetSize;
+
+        const yearlySavings = Math.max(0, yearlyIceCost - yearlyEvCost);
+        const savingsPerVehicle = fleetSize > 0 ? Math.max(0, yearlySavings / fleetSize) : 0;
+
+        // Format Indian Rupees
+        const formatter = new Intl.NumberFormat('en-IN', {
+            style: 'currency',
+            currency: 'INR',
+            maximumFractionDigits: 0
+        });
+
+        savingsDisplay.textContent = formatter.format(yearlySavings);
+        perVehicleDisplay.textContent = `${formatter.format(savingsPerVehicle)} Per Single Vehicle`;
+
+        // Update chart bars
+        const maxCost = Math.max(yearlyIceCost, 1000);
+        const iceHeightPct = Math.min(100, Math.max(10, (yearlyIceCost / maxCost) * 100));
+        const erkeyHeightPct = Math.min(100, Math.max(10, (yearlyEvCost / maxCost) * 100));
+
+        barIce.style.height = `${iceHeightPct}%`;
+        barErkey.style.height = `${erkeyHeightPct}%`;
+
+        // Short format function (e.g. ₹1.2L or ₹20K)
+        function formatShort(val) {
+            if (val >= 100000) {
+                return `₹${(val / 100000).toFixed(1)}L`;
+            } else if (val >= 1000) {
+                return `₹${(val / 1000).toFixed(0)}K`;
+            }
+            return `₹${val.toFixed(0)}`;
+        }
+
+        barIceVal.textContent = formatShort(yearlyIceCost);
+        barErkeyVal.textContent = formatShort(yearlyEvCost);
+    }
+
+    // Add event listeners
+    if (distanceInput) distanceInput.addEventListener('input', calculateSavings);
+    if (fleetInput) fleetInput.addEventListener('input', calculateSavings);
+    if (gasPriceInput) gasPriceInput.addEventListener('input', calculateSavings);
+
+    // Initial calculation
+    calculateSavings();
 </script>
 
 

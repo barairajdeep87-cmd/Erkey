@@ -142,10 +142,10 @@
 <!-- TopNavBar -->
 <header class="bg-surface/90 dark:bg-inverse-surface/90 backdrop-blur-md border-b border-surface-variant/20 dark:border-outline-variant/20 shadow-sm full-width top-0 sticky z-[100] transition-transform duration-300" id="main-header">
 <nav class="flex justify-between items-center h-20 px-margin-desktop w-full max-w-container-max mx-auto relative">
-<div class="flex items-center gap-3 cursor-pointer">
+<a href="../index.html" class="flex items-center gap-3 cursor-pointer">
     <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYNnfY3sEfMwLFHjBBzzjxwFYt8RH2o_Uo5cKkbIj16_NkLWM52noR_jt6-G0Y3ROHgrITjZTyP5ADLs_ra1ZA6lu8Qccf71G-y9Znmg00rWHOBWV8ls_Cpr8HlLSr_Iy3i1NwxMDrJz6A287ucNVHe-_22PM0AUyABgcMZCZOx0Eq_9ihXs9mVKEQq8NhdvY3H5FrODD_154Z7fs_0ZObDPYv_HUA_C2gjRCLzMTw2frYb2JzHS8vBEgqu5cOmLBsMEr1ua6AH3a7" alt="Erkey Motors Logo" class="h-10 w-auto object-contain">
     <span class="text-headline-md font-headline-md font-bold text-on-surface dark:text-inverse-on-surface">Erkey Motors</span>
-</div>
+</a>
 <div class="hidden md:flex gap-8 items-center h-full">
 <div class="h-full flex items-center" id="nav-item-products">
 <a class="font-nav-label text-nav-label text-on-surface hover:text-primary transition-colors flex items-center gap-1 cursor-pointer py-4" id="products-link">
@@ -192,7 +192,7 @@
 </header>
 <main class="relative min-h-[calc(100vh-80px)] w-full overflow-hidden flex flex-col">
 <!-- Full-Bleed Background Section -->
-<div class="absolute inset-0 z-0 bg-[#E0E0E0]" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDavPwsdT4dpwVTbkxFdECXPKK_sKz56j99q7i5jcH3g1KhServodTAodO3sbJWladl0Wewn6k4VhnszQfD3bOOhf8JjosLvBHFA2ALDJuDEp8Ek0rUy-zPgTfHZvUrmc1CvtEsDGT-7z1saBlr_2Eg-pnaw6y8FLkAG4A_h7tA4F5bcGQltDEdCIC4QxYGMr8FzZepOOHxRAE3OHkhAtYKUjTHgZvymidsNuGm8iRb71xnH7MHHNuViveQeTFWVo-c0CVmQz6KQzrf&quot;); background-size: cover; background-position: center center;">
+<div class="absolute inset-0 z-0 bg-[#E0E0E0]" style="background-image: url('WhatsApp%20Image%202026-07-06%20at%205.25.56%20PM.jpeg'); background-size: cover; background-position: center center;">
 <div class="absolute inset-0 hero-gradient" style="background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%);"></div>
 </div>
 <!-- Content Canvas -->
@@ -202,53 +202,53 @@
 <div class="flex flex-col gap-stack-sm mb-stack-lg">
 <span class="text-white text-nav-label font-nav-label tracking-widest uppercase opacity-80">Introducing</span>
 <h1 class="text-white font-headline-lg text-headline-lg-mobile md:text-display-lg italic-display uppercase leading-tight drop-shadow-xl">S93</h1>
-<div class="flex items-center gap-2">
-<span class="text-white/60 font-body-md text-caption">Powered By</span>
-<div class="h-6 w-32 bg-white/20 rounded flex items-center justify-center backdrop-blur-sm px-2">
-<span class="text-[10px] text-white font-bold tracking-tight">INDOFAST ENERGY</span>
-</div>
-</div>
+
 </div>
 </div>
 <!-- Booking Form Card -->
 <div class="w-full md:w-[460px] glass-card p-10 rounded-2xl shadow-2xl mt-12 md:mt-16 flex flex-col gap-6 border border-white/20">
 <div class="flex flex-col gap-2">
 <h2 class="text-on-surface font-headline-lg text-headline-md italic-display uppercase">Book Your Test drive</h2>
-<p class="text-on-surface-variant text-body-md">Enquire Now &amp; Get 2 Months of Free* Battery Swapping!</p>
 </div>
-<form class="flex flex-col gap-6" onsubmit="event.preventDefault();">
+<form class="flex flex-col gap-6" onsubmit="event.preventDefault(); alert('Thank you! Your enquiry has been received.');">
 <div class="group border-b border-outline-variant focus-within:border-primary transition-colors">
-<input class="w-full bg-transparent border-none p-0 py-3 text-on-surface placeholder:text-outline focus:ring-0 font-body-md" placeholder="Your Name*" type="text">
+<input class="w-full bg-transparent border-none p-0 py-3 text-on-surface placeholder:text-outline focus:ring-0 font-body-md" placeholder="Name*" type="text" required>
+</div>
+<div class="group border-b border-outline-variant focus-within:border-primary transition-colors">
+<input class="w-full bg-transparent border-none p-0 py-3 text-on-surface placeholder:text-outline focus:ring-0 font-body-md" placeholder="Organisation Name*" type="text" required>
+</div>
+<div class="group border-b border-outline-variant focus-within:border-primary transition-colors">
+<input class="w-full bg-transparent border-none p-0 py-3 text-on-surface placeholder:text-outline focus:ring-0 font-body-md" placeholder="Location*" type="text" required>
+</div>
+<div class="group border-b border-outline-variant focus-within:border-primary transition-colors">
+<input class="w-full bg-transparent border-none p-0 py-3 text-on-surface placeholder:text-outline focus:ring-0 font-body-md" placeholder="Min quantity required*" type="number" min="1" required>
 </div>
 <div class="flex items-center gap-3 border-b border-outline-variant focus-within:border-primary transition-colors">
 <div class="flex items-center gap-1 shrink-0">
 <img alt="India" class="w-5 h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpTm4zjpuShUBaWZV9SoMoQv_ZAAEamURgF4xt5nIdYI5hymY-3tZptCHgBdfVag-m0z5rptF2hK3bVFsEbLZYeyM4G4Rzecr8XkqMD8L5UXNpHrneTdlvYgNqhMFdwVuuajuUk21r8f4d8RyKra5-LIxEIwSX-T5CiKU6hK55g7Wn_o4ADkWFwMkP1nfkFh3e7Wz6a2REeta30GOUYNc-y39Pkf0745MByuE6KN0ZSF9U-i20bf0Zu0TI0vMMiCh1ratDAsaXU1G1">
 <span class="text-on-surface font-medium">+91</span>
 </div>
-<input class="w-full bg-transparent border-none p-0 py-3 text-on-surface placeholder:text-outline focus:ring-0 font-body-md" placeholder="Phone*" type="tel">
+<input class="w-full bg-transparent border-none p-0 py-3 text-on-surface placeholder:text-outline focus:ring-0 font-body-md" placeholder="Phone*" type="tel" required>
 </div>
 <div class="group border-b border-outline-variant focus-within:border-primary transition-colors">
-<select class="w-full bg-transparent border-none p-0 py-3 text-on-surface focus:ring-0 font-body-md appearance-none">
-<option disabled="" selected="" value="">City*</option>
-<option>Mumbai</option>
-<option>Delhi</option>
-<option>Bangalore</option>
-<option>Chennai</option>
-<option>Hyderabad</option>
+<input class="w-full bg-transparent border-none p-0 py-3 text-on-surface placeholder:text-outline focus:ring-0 font-body-md" placeholder="Mail Id*" type="email" required>
+</div>
+<div class="group border-b border-outline-variant focus-within:border-primary transition-colors">
+<input class="w-full bg-transparent border-none p-0 py-3 text-on-surface placeholder:text-outline focus:ring-0 font-body-md" placeholder="Current Fleet size*" type="number" min="0" required>
+</div>
+<div class="group border-b border-outline-variant focus-within:border-primary transition-colors">
+<select class="w-full bg-transparent border-none p-0 py-3 text-on-surface focus:ring-0 font-body-md" required>
+<option disabled="" selected="" value="">Client currently working with*</option>
+<option value="zomato">Zomato</option>
+<option value="swiggy">Swiggy</option>
+<option value="dominos">Dominos</option>
+<option value="bigbasket">BigBasket</option>
+<option value="others">Others</option>
 </select>
 </div>
 <button class="w-full bg-secondary-container hover:bg-secondary text-white font-button-label text-lg py-5 rounded-lg shadow-lg hover:shadow-secondary/30 transition-all duration-300 transform active:scale-95 mt-4">
-                        Send OTP
-                    </button>
-<div class="flex flex-col gap-2">
-<p class="text-[11px] leading-relaxed text-on-surface-variant font-medium">
-<strong class="text-on-surface uppercase block mb-1">Disclaimer:</strong>
-                            By sharing your contact information, you consent to receive calls and emails from us regarding new launches, exclusive offers, and promotions.
-                        </p>
-<p class="text-[11px] text-on-surface-variant">
-                            *100% cashback of the subscription in the wallet.
-                        </p>
-</div>
+Submit Enquiry
+</button>
 </form>
 </div>
 </div>
