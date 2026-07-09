@@ -156,7 +156,7 @@
 
 
 <a class="text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 text-nav-label font-nav-label uppercase" href="#">About Us</a>
-<a class="text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 text-nav-label font-nav-label uppercase" href="#">Contact Us</a>
+<a class="text-on-surface dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 text-nav-label font-nav-label uppercase" href="../stitch_erkey_motors_fleet_showcase (4)/index.html">Contact Us</a>
 </div>
 <!-- Mobile Menu Toggle -->
 <button class="md:hidden p-2 text-on-surface">
@@ -237,7 +237,7 @@
 <input class="w-full bg-transparent border-none p-0 py-3 text-on-surface placeholder:text-outline focus:ring-0 font-body-md" placeholder="Current Fleet size*" type="number" min="0" required>
 </div>
 <div class="group border-b border-outline-variant focus-within:border-primary transition-colors">
-<select class="w-full bg-transparent border-none p-0 py-3 text-on-surface focus:ring-0 font-body-md" required>
+<select id="client-select" class="w-full bg-transparent border-none p-0 py-3 text-on-surface focus:ring-0 font-body-md" required>
 <option disabled="" selected="" value="">Client currently working with*</option>
 <option value="zomato">Zomato</option>
 <option value="swiggy">Swiggy</option>
@@ -245,6 +245,9 @@
 <option value="bigbasket">BigBasket</option>
 <option value="others">Others</option>
 </select>
+</div>
+<div id="other-client-container" class="group border-b border-outline-variant focus-within:border-primary transition-colors hidden">
+<input id="other-client" class="w-full bg-transparent border-none p-0 py-3 text-on-surface placeholder:text-outline focus:ring-0 font-body-md" placeholder="Specify Client Name*" type="text">
 </div>
 <button class="w-full bg-secondary-container hover:bg-secondary text-white font-button-label text-lg py-5 rounded-lg shadow-lg hover:shadow-secondary/30 transition-all duration-300 transform active:scale-95 mt-4">
 Submit Enquiry
@@ -350,6 +353,24 @@ Submit Enquiry
             }
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         }, false);
+
+        // Toggle visibility of the specify client name input if 'Others' is selected
+        const clientSelect = document.getElementById('client-select');
+        const otherClientContainer = document.getElementById('other-client-container');
+        const otherClientInput = document.getElementById('other-client');
+
+        if (clientSelect && otherClientContainer && otherClientInput) {
+            clientSelect.addEventListener('change', () => {
+                if (clientSelect.value === 'others') {
+                    otherClientContainer.classList.remove('hidden');
+                    otherClientInput.setAttribute('required', 'required');
+                } else {
+                    otherClientContainer.classList.add('hidden');
+                    otherClientInput.removeAttribute('required');
+                    otherClientInput.value = '';
+                }
+            });
+        }
     </script>
 
 

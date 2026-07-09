@@ -1,0 +1,288 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact Us | Erkey EV</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&amp;family=Sora:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#001e2b",
+                        "on-surface-variant": "#414754",
+                        "on-secondary-fixed-variant": "#004d67",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#adc7ff",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f3f3f3",
+                        "primary-container": "#0070ea",
+                        "secondary-container": "#00c1fd",
+                        "outline-variant": "#c1c6d7",
+                        "on-primary-fixed": "#001a41",
+                        "inverse-on-surface": "#f1f1f1",
+                        "background": "#f9f9f9",
+                        "secondary": "#006688",
+                        "on-background": "#1a1c1c",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "on-tertiary-container": "#f7feff",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container": "#eeeeee",
+                        "surface-variant": "#e2e2e2",
+                        "primary": "#0059bb",
+                        "inverse-surface": "#2f3131",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-primary-container": "#fefcff",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#e5e2e1",
+                        "secondary-fixed": "#c2e8ff",
+                        "tertiary": "#5d5c5b",
+                        "secondary-fixed-dim": "#75d1ff",
+                        "on-secondary-container": "#004b65",
+                        "tertiary-container": "#767474",
+                        "surface-dim": "#dadada",
+                        "on-primary-fixed-variant": "#004493",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f9f9f9",
+                        "inverse-primary": "#adc7ff",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#005bc0",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "outline": "#717786",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "primary-fixed": "#d8e2ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "section-padding": "80px",
+                        "container-max": "1280px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Sora"],
+                        "caption": ["Hanken Grotesk"],
+                        "button-label": ["Hanken Grotesk"],
+                        "headline-md": ["Sora"],
+                        "body-md": ["Hanken Grotesk"],
+                        "display-lg": ["Sora"],
+                        "headline-lg": ["Sora"],
+                        "nav-label": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "button-label": ["14px", {"lineHeight": "1.0", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "nav-label": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .bento-main { grid-column: span 12; }
+        @media (min-width: 1024px) {
+            .bento-main { grid-column: span 7; }
+            .bento-side { grid-column: span 5; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full h-20 z-50 shadow-sm border-b border-outline-variant/10 transition-all duration-300 bg-surface/90">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop h-full">
+<a href="../index.html" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuChqSx2OApnxmqsRGDhbmFQFrPL36cqQtTbKtqua4wna95G16BaKZq6bIzZ_ky98F07zHZSCh5BSkUHKkvT89ml5JBqAaehQRHSa0c45a5giO5hd87MJcsaL8mjy4j5ns5jAoUI0i3Kyi2A2GupIExuhbLfWcbFO_qLHtUeImRSPDHOft-N13DSk0atVU6ZFBPYgYzZuFZZ0Qhvjw5w4TIarOVmZUfSHtG-txHPMullNYfnToQKAD5bDnAP8BOGwARJkBjpMbwQNsB1" alt="Erkey Motors Logo" class="w-full h-full object-cover rounded-lg"></div>
+<span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">Erkey Motors</span>
+</a>
+<div class="hidden md:flex items-center space-x-stack-lg">
+
+
+
+</div><div class="flex items-center space-x-4"><a class="font-nav-label text-nav-label text-primary border-b-2 border-primary pb-1" href="#">CONTACT US</a></div>
+
+</div>
+</nav>
+<main class="pt-32 pb-section-padding">
+<!-- Hero Section -->
+<header class="max-w-container-max mx-auto px-margin-desktop mb-16 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+<div class="max-w-3xl">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-6">Connect with Our Fleet Experts</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Accelerating the transition to sustainable urban logistics with precision engineering and intelligent fleet management. Our team is ready to scale your delivery ecosystem.</p>
+</div>
+</header>
+<!-- Main Content Grid -->
+<div class="max-w-container-max mx-auto px-margin-desktop bento-grid">
+<!-- Contact Form Section -->
+
+<!-- Side Bento Column -->
+<aside class="bento-side flex flex-col space-y-6">
+<!-- Location Card -->
+<div class="bg-surface-container-low p-stack-lg rounded-xl border border-outline-variant/30 flex flex-col h-full">
+<div class="flex items-center space-x-3 mb-stack-md text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">location_on</span>
+<h3 class="font-headline-md text-headline-md">Registered Address</h3>
+</div>
+<div class="font-body-md text-on-surface-variant space-y-4">
+<p class="font-semibold text-on-surface">Seepat Road Sarkanda Bilaspur</p>
+<p class="">C.G-495001&nbsp;<div class=""><font color="#1a1c1c"><b>Office Address -&nbsp;</b></font>Old Forestery, TEC Building , Guru&nbsp;</div><div class="">Ghasidas university campus , koni Bilaspus&nbsp;</div><div><br></div></p>
+<div class="pt-4 flex flex-col space-y-3">
+<a class="flex items-center space-x-3 hover:text-primary transition-colors" href="mailto:support@erkeymotors.com">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+<span class="">info@erkeymotor.com</span>
+</a>
+<a class="flex items-center space-x-3 hover:text-primary transition-colors" href="tel:+918005550199">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span class="">+91 8073435017</span>
+</a>
+</div>
+</div>
+<div class="mt-auto pt-stack-lg">
+<a href="https://maps.app.goo.gl/V3K4GzVXfSZBE3KW9" target="_blank" rel="noopener noreferrer" class="block w-full h-40 rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-500 border border-outline-variant/30 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="A stylized minimalist vector map of Bengaluru showing main transit arteries and tech hubs, rendered in a clean light-mode aesthetic with electric blue accents for Erkey EV facilities." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqjcAHnjCCKFGQNovTn_xtt3GaKk3XiC91ArJD9ZLwsf6sNFwNUVWozKR2Sq_AsferABwV9MIrsM_PWNMji0z6LAwYDaKOMDomGzB0YSaXhdY0IAoisBAEMDmotuDMkVD4VgboTUrlnrvfjLURVT62uRmOr7ugMGLXbZF3nVPMhHS_eqhl7bpq3cYBk6VSPcO3Q1_QT48kj_Fbgzdg-iJOQj8NrcX7LzZsHGFJVraRUEFjwoyMBYkcO0HXSp2OBQxuYYncxvOTLNTz">
+</a>
+</div>
+</div>
+<!-- Service Image Card -->
+<div class="bg-primary-fixed overflow-hidden rounded-xl h-full relative group">
+
+
+</div>
+</aside>
+</div>
+<!-- Logistics Stats Section (Atmospheric) -->
+<section class="max-w-container-max mx-auto px-margin-desktop mt-section-padding">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter text-center border-t border-outline-variant/20 pt-16">
+<div>
+<div class="font-display-lg text-display-lg text-primary mb-2">99.8%</div>
+<p class="font-nav-label text-nav-label text-outline uppercase tracking-widest">Fleet Uptime</p>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-primary mb-2">15m+</div>
+<p class="font-nav-label text-nav-label text-outline uppercase tracking-widest">Clean KM Driven</p>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-primary mb-2">24/7</div>
+<p class="font-nav-label text-nav-label text-outline uppercase tracking-widest">Expert Support</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-inverse-surface py-section-padding px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<div class="mb-stack-md">
+<a href="../index.html" class="flex items-center gap-4 hover:opacity-80 transition-opacity">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCykkjqqMSxMzGItvmVrVgpAptdvQwR94kDSdFS7aLtRXrG3iVgC3TVWG9EL9ynK7CNQ-3FTGkJP8nZOyzOJifCGMpfrROLrfF4WP9fuJdDRCilvqpRQFnH9sLDP0n7rzYLV5TCyfMJnDC-DecPK760146AZPyyfwJwD3YW9Qmu6wmqlFQLmXZ3KqndUZeJiyujpC3Hq7STQADbq_R5fsfytIABgeeWYhu7ZFUtPzEC3d1YHiITsYu2iBXs4S2g8E4So8AJCCsmtE_z" alt="Erkey Motors Logo" class="h-12 w-auto object-contain">
+<span class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface">Erkey Motors</span>
+</a>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant dark:text-outline mb-stack-md">High-Performance Electric Delivery Bikes</p>
+<div class="flex gap-stack-md">
+<a class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center hover:text-primary transition-colors" href="#">
+
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center hover:text-primary transition-colors" href="#">
+
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-button-label text-on-surface mb-stack-md">Products</h4>
+<ul class="space-y-2">
+<li class=""><a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Electric Scooters</a></li>
+<li class=""><a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Delivery Bikes</a></li>
+<li class=""><a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Charging Stations</a></li>
+<li class=""><a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">IoT Platform</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-button-label text-on-surface mb-stack-md">Company</h4>
+<ul class="space-y-2">
+<li class=""><a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">About Us</a></li>
+<li class=""><a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Fleet Solutions</a></li>
+<li class=""><a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">R&amp;D Center</a></li>
+<li class=""><a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-button-label text-on-surface mb-stack-md">Support</h4>
+<ul class="space-y-2">
+<li class=""><a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li class=""><a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li class=""><a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Service Centers</a></li>
+<li class=""><a class="text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Knowledge Base</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-stack-lg pt-stack-md border-t border-surface-variant/20 flex flex-col md:flex-row justify-between items-center text-caption font-caption text-outline">
+<p class="">© 2024 Erkey Motors. All rights reserved.</p>
+<div class="flex gap-gutter mt-stack-sm md:mt-0">
+<span class="">Designed for Efficiency</span>
+<span class="">Powered by Electric</span>
+</div>
+</div>
+</footer>
+<script>
+        // Subtle scroll behavior for the TopNavBar
+        window.onscroll = function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('h-16', 'bg-white');
+                nav.classList.remove('h-20', 'bg-surface/90');
+            } else {
+                nav.classList.add('h-20', 'bg-surface/90');
+                nav.classList.remove('h-16', 'bg-white');
+            }
+        };
+
+        // Form interaction feedback
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.querySelector('label')?.classList.add('text-primary');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.querySelector('label')?.classList.remove('text-primary');
+            });
+        });
+    </script>
+
+
+
+
+</body></html>
